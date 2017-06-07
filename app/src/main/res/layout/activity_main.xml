@@ -12,15 +12,15 @@
     tools:context="com.londonappbrewery.bitcointicker.MainActivity">
 
     <TextView
+        android:id="@+id/priceLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/label_default_text"
-        android:id="@+id/priceLabel"
-        android:textSize="45sp"
-        android:textStyle="bold"
-        android:textColor="@color/fontColour"
+        android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
+        android:text="@string/label_default_text"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="45sp"
+        android:textStyle="bold"/>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -61,5 +61,15 @@
 
 
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/busyWidget"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/priceLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1"
+        android:visibility="invisible"/>
 
 </RelativeLayout>
